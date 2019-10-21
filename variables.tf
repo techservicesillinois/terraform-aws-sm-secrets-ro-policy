@@ -1,6 +1,6 @@
 variable "secrets" {
   description = "A list of secret names"
-  type        = "list"
+  type        = list(string)
 }
 
 variable "name" {
