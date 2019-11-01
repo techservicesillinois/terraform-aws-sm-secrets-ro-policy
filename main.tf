@@ -1,14 +1,14 @@
 data "aws_secretsmanager_secret" "selected" {
-  count = "${length(var.secrets)}"
-  name  = "${var.secrets[count.index]}"
+  count = length(var.secrets)
+  name  = var.secrets[count.index]
 }
 
 resource "aws_iam_policy" "default" {
-  name        = "${var.name}"
-  path        = "${var.path}"
-  description = "${var.description}"
+  name        = var.name
+  path        = var.path
+  description = var.description
 
-  policy = "${data.aws_iam_policy_document.default.json}"
+  policy = data.aws_iam_policy_document.default.json
 }
 
 data "aws_iam_policy_document" "default" {
@@ -17,8 +17,6 @@ data "aws_iam_policy_document" "default" {
       "secretsmanager:GetSecretValue",
     ]
 
-    resources = [
-      "${data.aws_secretsmanager_secret.selected.*.arn}",
-    ]
+    resources = data.aws_secretsmanager_secret.selected.*.arn
   }
 }
