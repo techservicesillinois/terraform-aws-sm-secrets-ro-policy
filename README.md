@@ -1,6 +1,6 @@
 # sm-secrets-ro-policy
 
-[![Build Status](https://drone.techservices.illinois.edu/api/badges/techservicesillinois/terraform-aws-sm-secrets-ro-policy/status.svg)](https://drone.techservices.illinois.edu/techservicesillinois/terraform-aws-sm-secrets-ro-policy)
+[![Terraform actions status](https://github.com/techservicesillinois/terraform-aws-sm-secrets-ro-policy/workflows/terraform/badge.svg)](https://github.com/techservicesillinois/terraform-aws-sm-secrets-ro-policy/actions)
 
 Provides an IAM policy that allows read access to a specified set
 of Secret Manager secrets.
