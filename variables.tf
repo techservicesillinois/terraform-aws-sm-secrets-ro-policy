@@ -16,3 +16,9 @@ variable "path" {
   description = "IAM policy path"
   default     = "/"
 }
+
+variable "tags" {
+  description = "Tags to be applied to resources where supported"
+  type        = map(string)
+  default     = {}
+}

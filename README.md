@@ -18,6 +18,8 @@ The following arguments are supported:
 
 * `path` - The IAM policy path (default "/")
 
+* `tags` - Tags to be applied to resources where supported.
+
 Attributes Reference
 --------------------
 
